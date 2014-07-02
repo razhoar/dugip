@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+       
+    <head>
+        
+        <title> </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="custom/css/main.css" rel="stylesheet">
+        
+        <link href="c3d3/c3.css" rel="stylesheet" type="text/css">
+
+        <style>
+            body > .container-fluid {
+                font-size: 12px;
+            }
+            
+            .bg-color-red {
+                background-color: rgba(255, 86, 86, 1);
+            }
+            
+            .bg-color-yellow {
+                background-color: rgba(255, 255, 113, 1);
+            }
+            
+            .card-red {
+                display:block;
+                width: 17px;
+                height: 26px;
+                background-color: rgba(255, 86, 86, 1);
+                border-radius: 2px;
+            }
+            
+            .card-yellow {
+                display:block;
+                width: 17px;
+                height: 26px;
+                background-color: rgba(255, 255, 113, 1);
+                border-radius: 2px;                
+            }
+            
+            td,th {
+                text-align: center;
+            }
+            
+            td i {
+                text-align: center;
+                margin: auto;
+            }
+            
+            #score h1 {
+                display: inline;
+            }
+            
+            #score-number {
+                color: #FFF;
+                width: 70px;
+                height: 70px;
+                display: inline;
+                font-size: 50px;
+                float:left;
+                text-align: center;
+                border-radius: 8px;
+                margin-right: 2px;
+            }
+            
+            .bg-red-team {
+                background-color: #BF0000;
+            }
+            
+            .bg-green-team {
+                background-color: rgba(43, 161, 0, 1);
+            }
+            
+            .row {
+                margin-bottom: 20px;
+            }
+            
+            #canchas div {
+                display:inline-block;
+                margin-right: 10px;
+                margin-left: 2%;
+                
+            }
+            
+            #canchas h5, img {
+                display:block;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px;">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                    <ul class="nav navbar-nav">
+                        <li class="logo"><a href="#">Dugip</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            
+            <div class="row">
+                
+                <div class="col-md-5">
+                </div>
+                
+                <div class="col-md-2">
+                    <div>
+                        <h6>Red Team Vs. Green Team<h6>
+                    </div>
+                    <div>
+                        <div id="score-number" class="bg-red-team">   3 </div>
+                        <div id="score-number" class="bg-green-team"> 2 </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                </div>
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-2">
+                </div>
+                
+                <div class="col-md-10" style="float:none;margin: 0 21%;">
+                    <video width="720" height="440" controls>
+                        <source src="video/video_output.mp4" type="video/mp4">
+                        <object data="video/video_output.mp4" width="720" height="240">
+                            <embed src="movie.swf" width="720" height="240">
+                        </object>
+                    </video> 
+                </div>
+                
+                <div class="col-md-2">
+                </div>                
+                              
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-1">
+                </div>
+                
+                <div id="canchas" class="col-md-10">
+                    <div> <img src="custom/img/cancha1.png"> <h5> Garrido </h5> </div>
+                    <div> <img src="custom/img/cancha2.png"> <h5> Prieto </h5> </div>
+                    <div> <img src="custom/img/cancha3.png"> <h5> Moreno </h5> </div>
+                    <div> <img src="custom/img/cancha4.png"> <h5> Ortega </h5> </div>
+                </div>
+                
+                <div class="col-md-1">
+                </div>                
+            </div>
+            
+            <div class="row">
+
+                <div class="col-md-3">
+                </div>
+                
+                <div class="col-md-6">
+                    <img src="custom/img/future.jpg">
+                </div>
+                
+                <div class="col-md-3">
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"> <br> </div>
+
+                        <table class="table table-striped ">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Recuperaciones</th>
+                                    <th>Pases</th>
+                                    <th>Centros</th>
+                                    <th>Faltas</th>
+                                    <th>Remates</th>
+                                    <th>Minutos</th>
+                                    <th>Tarjetas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Hector</td>
+                                    <td>Hernandez</td>
+                                    <td>3</td>
+                                    <td>83</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Cesar </td>
+                                    <td>Diaz</td>
+                                    <td>0</td>
+                                    <td>119</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>90</td>  
+                                    <td><i class="card-red"></i></td>
+                                </tr>
+                                <tr>
+                                    <td> Gregorio </td>
+                                    <td>Moreno</td>
+                                    <td>0</td>
+                                    <td>44</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>18</td>   
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td> Lorenzo </td>
+                                    <td>Romero</td>
+                                    <td>1</td>
+                                    <td>101</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>9</td>   
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Arturo </td>
+                                    <td>Alonso</td>
+                                    <td>5</td>
+                                    <td>97</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>11</td>
+                                    <td>48</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Jaime </td>
+                                    <td>Ortega</td>
+                                    <td>0</td>
+                                    <td>65</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>34</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> German </td> 
+                                    <td>Rubio</td>
+                                    <td>1</td>
+                                    <td>87</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Lucas </td>
+                                    <td>Garrido</td>
+                                    <td>1</td>
+                                    <td>57</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>45</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Adolfo </td>
+                                    <td>Galan</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>90</td>
+                                    <td><i class="card-yellow"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Esteban</td>
+                                    <td>Prieto</td>
+                                    <td>0</td>
+                                    <td>64</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Facundo</td>
+                                    <td>Campos</td>
+                                    <td>0</td>
+                                    <td>39</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Joel </td>
+                                    <td>Soto</td>
+                                    <td>3</td>
+                                    <td>52</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>90</td> 
+                                    <td></i></td>
+                                </tr>
+                                <tr>
+                                    <td> Sergi </td>
+                                    <td>Pastor</td>
+                                    <td>0</td>
+                                    <td>63</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Abel </td>
+                                    <td>Rios</td>
+                                    <td>2</td>
+                                    <td>47</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+<div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"> <br> </div>
+
+                        <table class="table table-striped ">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Recuperaciones</th>
+                                    <th>Pases</th>
+                                    <th>Centros</th>
+                                    <th>Faltas</th>
+                                    <th>Remates</th>
+                                    <th>Minutos</th>
+                                    <th>Tarjetas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Hector</td>
+                                    <td>Hernandez</td>
+                                    <td>3</td>
+                                    <td>83</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Cesar </td>
+                                    <td>Diaz</td>
+                                    <td>0</td>
+                                    <td>119</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>90</td>  
+                                    <td><i class="card-yellow"></i></td>
+                                </tr>
+                                <tr>
+                                    <td> Gregorio </td>
+                                    <td>Moreno</td>
+                                    <td>0</td>
+                                    <td>44</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>18</td>   
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td> Lorenzo </td>
+                                    <td>Romero</td>
+                                    <td>1</td>
+                                    <td>101</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>9</td>   
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Arturo </td>
+                                    <td>Alonso</td>
+                                    <td>5</td>
+                                    <td>97</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>11</td>
+                                    <td>48</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Jaime </td>
+                                    <td>Ortega</td>
+                                    <td>0</td>
+                                    <td>65</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>34</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> German </td> 
+                                    <td>Rubio</td>
+                                    <td>1</td>
+                                    <td>87</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Lucas </td>
+                                    <td>Garrido</td>
+                                    <td>1</td>
+                                    <td>57</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>45</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Adolfo </td>
+                                    <td>Galan</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>5</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Esteban</td>
+                                    <td>Prieto</td>
+                                    <td>0</td>
+                                    <td>64</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Facundo</td>
+                                    <td>Campos</td>
+                                    <td>0</td>
+                                    <td>39</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Joel </td>
+                                    <td>Soto</td>
+                                    <td>3</td>
+                                    <td>52</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>90</td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Sergi </td>
+                                    <td>Pastor</td>
+                                    <td>0</td>
+                                    <td>63</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td> Abel </td>
+                                    <td>Rios</td>
+                                    <td>2</td>
+                                    <td>47</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>90</td>
+                                    <td></td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>                
+                
+            </div>
+        </div>
+        
+        
+        <script src="c3d3/d3.v3.min.js" charset="utf-8"></script>
+        
+        <script src="c3d3/c3.min.js"></script>        
+        
+        <script src="jquery.js" type="text/javascript" > </script>
+        
+        <script src="simpleUpload.js" type="text/javascript"> </script>
+        
+        <script>
+
+        </script>
+    </body>
+</html>

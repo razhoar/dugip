@@ -1,0 +1,52 @@
+body {
+    font-family: "Ubuntu";
+    font-size: 15px;
+}
+
+
+button {
+  width: 155px;
+  height: 155px;
+  line-height: 150px;
+  text-align: center;
+  background-color: orange;
+  border: 3px solid #FFF;
+  border-radius: 80px;
+  color: #FFF;
+  font-size: 21px;
+  font-family: "Ubuntu";
+  display: block
+}
+
+.btn-icon {
+    color: #000 !important;
+    background-color: red;
+}
+
+.a-center {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-decoration: none !important;
+  color: #FFF;
+}
+
+#processing-message {
+    display: none;
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.a-center:hover {
+    color: #FFF;
+}
+
+.navbar-inverse {
+   border: none;
+   font-size: 17px;
+}
+
+.logo {
+  font-size: 20px;   
+}

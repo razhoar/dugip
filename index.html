@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+       
+    <head>
+        
+        <title> </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="custom/css/main.css" rel="stylesheet">
+        
+        <link href="c3d3/c3.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body style="background-image: url('custom/img/futbol.jpg'); background-repeat: no-repeat; background-size: 1400px 670px">
+        
+        <nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px;margin-bottom: 0px">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                    <ul class="nav navbar-nav">
+                        <li class="logo"><a href="#">Dugip</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+
+            
+            <div class="row">
+                
+                <div class="col-md-5">
+                </div>
+                
+                <div class="col-md-2">
+                    
+                    <input id="video-file" type="file" name="arquivo" class="upload" data-url="htbin/processing.cgi" style="display: none">
+                    <button id="file" onclick="$('#video-file').click()" style="position:absolute;top:190px;left:0;right:0;margin-left:auto;margin-right:auto">Up your video!</button>
+
+                    <br><br>
+                    <p id="processing-message" style="position:absolute;top:250px;left:30px;right:0;margin-left:auto;margin-right:auto"> Processing video ...</p>
+
+                </div>
+                
+                <div class="col-md-5">
+                </div>                
+            </div>
+        </div>
+        
+        
+        <script src="c3d3/d3.v3.min.js" charset="utf-8"></script>
+        
+        <script src="c3d3/c3.min.js"></script>        
+        
+        <script src="jquery.js" type="text/javascript" > </script>
+        
+        <script src="simpleUpload.js" type="text/javascript"> </script>
+        
+        <script>
+            $(".upload").simpleUpload({
+                success: function()
+                {
+                    $("#file").css("display", "none");
+                    $("#processing-message").css("display", "block");
+                    
+                    var checkStatusInterval = 5000;
+                    
+                    var checkStatusFunc = 
+                    function()
+                    {
+                        $.get(
+                            "video/video_output.mp4", 
+                            function(data, status)
+                            {
+                                window.location = "dashboard.html";
+                            });
+                    };
+                    
+                    var checkStatusTimer = setTimeout(checkStatusFunc, checkStatusInterval);                  
+                }
+            });
+        </script>
+    </body>
+</html>
